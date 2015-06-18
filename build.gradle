@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+sourceCompatibility = JavaVersion.VERSION_1_5
+targetCompatibility = JavaVersion.VERSION_1_5
+
+version = '0.1'
+group = 'com.checkdroid'
+
+android {
+    compileSdkVersion 'android-22'
+    buildToolsVersion '22.0.1'
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'org.hamcrest:hamcrest-core:1.3'
+    compile 'com.google.guava:guava:18.0'
+
+    compile 'com.android.support.test:runner:0.3'
+    compile 'com.android.support.test:rules:0.3'
+    compile 'com.android.support.test.espresso:espresso-core:2.2'
+}
