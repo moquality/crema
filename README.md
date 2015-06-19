@@ -40,8 +40,15 @@ import static com.checkdroid.crema.EspressoPlus.*;
 With Crema, we want to bring a library of new matchers and assertions to espresso.
 
 As of now, crema has the following:
-* <b>XPath Matcher: </b> `withXPath(String xPath)` and `withXPath2(String xPath)` are two implementations of xPath Matchers provided by crema.
-* More coming <i>soon</i>..
+* <b>XPath Matchers: </b> Crema has 2 implementations of xPath Matchers
+ * `withXPath(String xPath)`
+ * `withXPath2(String xPath)`
+* <b>Taking screenshots in tests: </b> Saves screenshots as `/sdcard/{filename}_{timestamp}.png`
+ * `takeScreenshot()` - default file name is package name
+ * `takeScreenshot(String file)`
+ * `takeScreenshot(boolean timestamp)` - timestamp is not added if false
+ * `takeScreenshot(String file, boolean addTimestamp)`
+* <i>More coming soon</i>..
 
 # Support
 * Got any issues/problems with crema?
