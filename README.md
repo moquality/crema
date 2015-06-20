@@ -6,11 +6,11 @@ Word origin: [Crema](https://www.seattlecoffeegear.com/learn/coffee-101/articles
 
 # How to get Crema
 
-As of now, crema is not on jcenter (but it will soon be!). So, you need to add a Maven URL into your <b>project's build.gradle</b>
+<b>STEP 1:</b> Crema is on jcenter. If you are already using it (Android default), then skip this step.  
+If you are not using jcenter, add the folloring maven dependency to your <b>project's build.gradle</b>
 ```
 allprojects {
     repositories {
-        jcenter()
         maven {
             url  "http://dl.bintray.com/checkdroid/com.checkdroid"
         }
@@ -18,7 +18,7 @@ allprojects {
 }
 ```
 
-Next, you need to add a test compile dependency to your <b>app's build.gradle</b>
+<b>STEP 2:</b> Next, you need to add a test compile dependency to your <b>app's build.gradle</b>
 ```
 dependencies {
     // Testing-only dependencies
@@ -29,7 +29,7 @@ dependencies {
 }
 ```
 
-Finally, add EspressoPlus.* matchers in your test.
+<b>STEP 3:</b> Finally, add EspressoPlus.* matchers in your test.
 ```
 import static com.checkdroid.crema.EspressoPlus.*;
 ```
