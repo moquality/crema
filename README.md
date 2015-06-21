@@ -7,7 +7,7 @@ Word origin: [Crema](https://www.seattlecoffeegear.com/learn/coffee-101/articles
 # How to get Crema
 
 <b>STEP 1:</b> Crema is on jcenter. If you are already using it (Android default), then skip this step.  
-If you are not using jcenter, add the folloring maven dependency to your <b>project's build.gradle</b>
+If you are not using jcenter, add the following maven dependency to your <b>project's build.gradle</b>
 ```
 allprojects {
     repositories {
@@ -40,12 +40,12 @@ import static com.checkdroid.crema.EspressoPlus.*;
 With Crema, we want to bring a library of new matchers and assertions to espresso.
 
 As of now, crema has the following:
-* <b>XPath Matchers: </b> Crema has 2 implementations of xPath Matchers
+* <b>[XPath Matchers](https://github.com/checkdroid/crema/wiki/XPath-Matching): </b> Crema has 2 implementations of xPath Matchers
  * `withXPath(String xPath)`
  * `withXPath2(String xPath)`
 * <b>Taking screenshots in tests: </b> Saves screenshots as `/sdcard/{filename}_{timestamp}.png`
  * `takeScreenshot()` - default file name is package name
- * `takeScreenshot(String file)`
+ * `takeScreenshot(String filename)`
  * `takeScreenshot(boolean timestamp)` - timestamp is not added if false
  * `takeScreenshot(String file, boolean addTimestamp)`
 * <i>More coming soon</i>..
