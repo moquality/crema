@@ -55,3 +55,5 @@ As of now, crema has the following:
 * Any other matchers/assertious you would like?
 
 Please create [new issues](https://github.com/checkdroid/crema/issues/new) on github to reach out to us!
+
+Signup for updates here: http://checkdroid.com/updates
