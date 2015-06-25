@@ -137,10 +137,14 @@ public class EspressoPlus {
 
                 String sNodeClasses[] = xPath.substring(1).split("/");
                 int index = sNodeClasses.length-1;
+                int numberOfChecksDone = 0;
 
                 String xp="";
                 View currNode=node;
                 while(currNode!=null){
+                    if(index < 0){
+                        return false;
+                    }
                     String currClass=currNode.getClass().getName();
                     ViewParent viewParent = currNode.getParent();
                     if(viewParent!=null && viewParent instanceof ViewGroup){
@@ -151,7 +155,7 @@ public class EspressoPlus {
                             for(int i=0;i<currNodeParent.getChildCount();i++){
                                 View childNode = currNodeParent.getChildAt(i);
                                 if(childNode!=null && childNode.getVisibility()==View.VISIBLE
-                                        && isInstance(childNode, sNodeClasses[index])){
+                                        && isInstance(childNode, getClassName(sNodeClasses[index]))){
                                     childNodeList.add(childNode);
                                 }
                             }
@@ -201,9 +205,14 @@ public class EspressoPlus {
                         }
                         currNode=null;
                     }
+                    numberOfChecksDone++;
                 }
                 Log.d(TAG, "Final XPath"+xp);
-                return true;
+                if(numberOfChecksDone == sNodeClasses.length){
+                    return true;
+                }else{
+                    return false;
+                }
             }
 
             private boolean checkEquals(String[] classes, int index, View node2, int pos2){
@@ -240,6 +249,12 @@ public class EspressoPlus {
                 }
             }
         };
+    }
+
+    private static String getClassName(String className) {
+        if(className.endsWith("]")) {
+            return className.substring(0, className.indexOf('['));
+        }else return className;
     }
 
     public static Matcher<View> withXPath2(final String xPath) {
