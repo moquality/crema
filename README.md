@@ -1,5 +1,7 @@
 # Crema
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/checkdroid/crema?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 Set of utilities to extend the <a href="https://developer.android.com/training/testing/ui-testing/espresso-testing.html">espresso testing framework</a>
 
 Word origin: [Crema](https://www.seattlecoffeegear.com/learn/coffee-101/articles/what-is-crema) is the foam that makes [espresso](https://en.wikipedia.org/?title=Espresso) delicious.
