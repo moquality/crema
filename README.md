@@ -50,6 +50,9 @@ As of now, crema has the following:
  * `takeScreenshot(String filename)`
  * `takeScreenshot(boolean timestamp)` - timestamp is not added if false
  * `takeScreenshot(String file, boolean addTimestamp)`
+* <b>[Fetchers](https://github.com/checkdroid/crema/wiki/Fetchers)</b>
+ * `TextFetcher` class to get the text contained in a particular node
+ * `ViewTreeFetcher` class to get the espresso view tree (different from UIAutomator view tree)
 * <i>More coming soon</i>..
 
 # Support
