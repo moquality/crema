@@ -8,26 +8,15 @@ Word origin: [Crema](https://www.seattlecoffeegear.com/learn/coffee-101/articles
 
 # How to get Crema
 
-<b>STEP 1:</b> Crema is on jcenter. If you are already using it (Android default), then skip this step.  
-If you are not using jcenter, add the following maven dependency to your <b>project's build.gradle</b>
-```
-allprojects {
-    repositories {
-        maven {
-            url  "http://dl.bintray.com/checkdroid/com.checkdroid"
-        }
-    }
-}
-```
+<b>STEP 1:</b> Download crema.jar from [Releases](https://github.com/checkdroid/crema/releases) and paste to your lib folder.
 
 <b>STEP 2:</b> Next, you need to add a test compile dependency to your <b>app's build.gradle</b>
 ```
 dependencies {
     // Testing-only dependencies
-    androidTestCompile 'com.android.support.test:runner:0.3'
-    androidTestCompile 'com.android.support.test:rules:0.3'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
-    androidTestCompile 'com.checkdroid:crema:0.1'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile files('libs/crema-1.0.jar')
 }
 ```
 
